@@ -129,6 +129,49 @@ int main(){
 				break;
 		}
 		
+		cout << "You got " << score << " out of " << count << " correct " << endl;
+			cout << endl;
+			cout << "which is " << (score / count) * 100 << "%" << endl;
+			cout << "thanks for playing" << endl;
+			cout << questions << endl;
+			cout << r << endl;
+			cout << count;
+			cin.get();
+			cin.get();
+			return 0;
+} // end of main function
+
+// Pick a question function
+void pick_a_question(){
+		int r;
+		int q;
+		int n;
+
+		r = randNum(3) + 1;
+		q = select_next_available(n);
+}
+
+// Selecting next available question
+
+int select_next_available(int n){
+		int i = 0;
+	while (quest_ans[i])
+		i++;
+
+	while (n-- > 0) {
+			i++;
+		while (quest_ans[i])
+			i++;
+	}
+		quest_ans[i] = true;
+		return i;
+}
+
+// Random Question Generator
+
+int randNum(int r) {
+		return rand() % 3 + 1;
+}
 
 
 	
