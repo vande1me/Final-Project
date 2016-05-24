@@ -2,11 +2,14 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int randNum(int n);
 void pick_a_question();
 int select_next_available(int n);
+
+char *variable[4] = { "1", "2", "3", "4" };
 
 bool quest_ans[4];
 int questions;
@@ -15,7 +18,9 @@ int main(){
 		int score = 0;
 		int count = 0;
 		int questions;
-		int r, i, n;
+		int r = 0;
+		int i = 0;
+		int n = 0;
 		char answer;
 		
 		srand(time(0)); // set seed for randomizing
@@ -25,7 +30,6 @@ int main(){
 			pick_a_question();
 
 		switch (r)
-			
 		{
 			
 		case 1:
